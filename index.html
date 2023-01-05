@@ -1,90 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-          padding:0;
-          margin: 0;
-          box-sizing: border-box;
-        }
-        
-          body{
-            background:#0B2429;
-           
-            min-width: 100vw;
-            min-height: 100vh;
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-            display: grid;
-            place-items:center;
-        
-            overflow: hidden;
-          }
+      body {
+        background: #0b2429;
 
-        
+        min-width: 100vw;
+        min-height: 100vh;
 
-        .circle-two{
-          background:#998235;
-            width: 120px;
-            height: 120px;
-            
-            border-radius: 100px 0px 100px
-            100px;
-        
-            position: relative;
+        display: grid;
+        place-items: center;
 
-            transform: scale(0.85);
+        overflow: hidden;
+      }
 
-        }
-        
-          .circle-two::after{
-            content:'';
-        
-            display:inline-block;
-            
-            background:#F3AC3C;
-            width: 120px;
-            height: 120px;
-            
-            border-radius: 100px 0px 100px
-            100px;
-        
-            position: absolute;
-            left:0;
-            transform: translate(-50%, 50%);
-        
-            
-        }
-        
-           .circle-two::before{
-            content:'';
-        
-            display:inline-block;
-            
-            background:#F3AC3C;
-            width: 120px;
-            height: 120px;
-            
-            border-radius: 100px;
+      .circle-two {
+        background: #998235;
+        width: 120px;
+        height: 120px;
 
-           
-            transform:translate(50%,-50%);
-            
-            
-           }
+        border-radius: 100px 0px 100px 100px;
 
-           
+        position: relative;
 
-         
-        </style>
-        
-</head>
-<body>
-    
+        transform: scale(0.85);
+      }
+
+      .circle-two::before,
+      .circle-two::after {
+        content: "";
+
+        display: inline-block;
+
+        background: #f3ac3c;
+        width: 120px;
+        height: 120px;
+      }
+
+      .circle-two::after {
+        border-radius: 100px 0px 100px 100px;
+
+        position: absolute;
+        left: 0;
+        transform: translate(-50%, 50%);
+      }
+
+      .circle-two::before {
+        border-radius: 100px;
+
+        transform: translate(50%, -50%);
+
+        /* z-index: -5; */
+      }
+    </style>
+  </head>
+  <body>
     <div class="circle-two"></div>
-
-</body>
+  </body>
 </html>
